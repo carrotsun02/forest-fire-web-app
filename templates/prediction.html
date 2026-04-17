@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>산불 예측 정보 입력</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h3 class="mb-0">조건 입력</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="/result" method="POST">
+                            <div class="mb-3">
+                                <label for="longitude" class="form-label fw-bold">경도 (Longitude):</label>
+                                <input type="number" step="any" class="form-control" name="longitude" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="latitude" class="form-label fw-bold">위도 (Latitude):</label>
+                                <input type="number" step="any" class="form-control" name="latitude" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="month" class="form-label fw-bold">월 (Month, 예: 03-Mar):</label>
+                                <input type="text" class="form-control" name="month" placeholder="예: 03-Mar" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="day" class="form-label fw-bold">요일 (Day, 예: 05-fri):</label>
+                                <input type="text" class="form-control" name="day" placeholder="예: 05-fri" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="avg_temp" class="form-label fw-bold">평균 기온:</label>
+                                <input type="number" step="any" class="form-control" name="avg_temp" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="max_temp" class="form-label fw-bold">최고 기온:</label>
+                                <input type="number" step="any" class="form-control" name="max_temp" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="max_wind_speed" class="form-label fw-bold">최대 풍속:</label>
+                                <input type="number" step="any" class="form-control" name="max_wind_speed" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="avg_wind" class="form-label fw-bold">평균 풍속:</label>
+                                <input type="number" step="any" class="form-control" name="avg_wind" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">예측 결과 보기</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-auto py-3 text-center">
+        <div class="container">
+            <span class="text-secondary">ⓒ 2021810051 이민준</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
