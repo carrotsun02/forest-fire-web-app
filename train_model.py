@@ -124,6 +124,6 @@ model.fit(fires_prepared, fires_labels, epochs=50)
 
 # 모델 및 전처리 파이프라인 저장
 print("2021810051 LeeMinJun")
-model.save("forest_fire_model.keras")
+model.save("forest_fire_model.h5") 
 joblib.dump(full_pipeline, "full_pipeline.pkl")
 print("Model and pipeline saved successfully.")

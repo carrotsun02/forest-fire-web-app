@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # 저장된 파이프라인과 모델 불러오기
 pipeline = joblib.load('full_pipeline.pkl')
-model = keras.models.load_model('forest_fire_model.keras')
+model = keras.models.load_model('forest_fire_model.h5')
 
 @app.route('/')
 def index():
